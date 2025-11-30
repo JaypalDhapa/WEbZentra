@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="/favicon.png" rel="icon">
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+            integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+            crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <title>WebZentra</title>
+    </head>
+    <body>
+        <header class="navbar">
+            <nav class="nav-container">
+                <a href="#" class="logo">
+                    <img src="/images/Group 2.png" alt="logo">
+                </a>
+
+                <ul class="nav-menu">
+                    <!-- <div class="nav-manu-header"> -->
+                        <img src="/images/Group 2.png" alt="" class="nav-menu-img">
+                        <li class="nav-item"><a href="#" class="nav-link">Home</a></li>
+                        <li class="nav-item"><a href="#" class="nav-link">About</a></li>
+                        <li class="nav-item"><a href="#" class="nav-link">Sevices</a></li>
+                        <li class="nav-item"><a href="#" class="nav-link">Blog</a></li>
+                        <li class="nav-item"><a href="#contact" class="nav-link">Contact</a></li>
+                    <!-- </div> -->
+                    <a class="getintouch nav-link" href="#contact" >GET IN TOUCH</a>
+                </ul>
+                <div class="nav-right">
+                    <a class="nav-btn" href="#contact">
+                        <button>Request Quote</button>
+                    </a>
+                    <a class="mobile-btn" href="#contact">
+                        <i class="fa-regular fa-envelope"></i>
+                    </a>
+                    <button class="hamburger">
+                        <i class="fa-solid fa-bars"></i>
+                    </button>
+                </div>
+            </nav>
+        </header>
+
+        <!--backtoTop arrow -->
+        <div id="backToTop"><i class="fa-solid fa-arrow-up"></i></div>
+        <!-- Hero section  -->
+        <section class="hero-section">
+            <div class="hero-content">
+                <h1>Professional Web Development for your Business Growth</h1>
+                <p>WebZentra is a full-services web development company providing everything you need to growth you
+                    business online.Our experienced team works closely with clients to deliver the best solutions for
+                    their website</p>
+                <!-- <p>Our experienced team works closely with clients to deliver the best solutions for their website</p> -->
+                <p>We deliver modern, responsive, and high-converting websites trusted by businesses worldwide. Your
+                    project is handled with care, professionalism, and guaranteed quality.</p>
+                <a href="#" id="cta-btn" class="cta-button">Talk to Our Expert <i
+                        class="fa-solid fa-arrow-right"></i></a>
+            </div>
+            <div class="hero-slideshow">
+                <div class="slides">
+                    <div class="slide slide-1 active">
+                        <img src="images/slide-1.png" alt="">
+                    </div>
+                    <div class="slide slide-2">
+                        <img src="/images/slide-2.png" alt="">
+                    </div>
+                    <div class="slide slide-3">
+                        <img src="slide-3.avif" alt="">
+                    </div>
+                    <div class="slide slide-4">
+                        <img src="/images/slide-4.png" alt="">
+                    </div>
+                    <div class="slide slide-5">
+                        <img src="/images/slide-5.png" alt="">
+                    </div>
+                    <div class="slide slide-6">
+                        <img src="/images/slide-6.avif" alt="">
+                    </div>
+
+                </div>
+
+                <div class="dots-container">
+                    <div class="dot active" data-slide="0"></div>
+                    <div class="dot " data-slide="1"></div>
+                    <div class="dot" data-slide="2"></div>
+                    <div class="dot" data-slide="3"></div>
+                    <div class="dot" data-slide="4"></div>
+                    <div class="dot" data-slide="5"></div>
+                </div>
+            </div>
+
+
+        </section>
+
+        <section class="contact-section" id="contact">
+            <div class="contact-container">
+                <div class="contact-info">
+                    <h1>YOUR SUCCESS STORY STARTS HERE!</h1>
+                    <h3>We’re ready to turn your vision into reality with these key services:</h3>
+                    <p>your project matters to us. WebZentra ensures clear communication, quick responses, and
+                        professional guidance from start to finish. Tell us what you need - we're here to help.</p>
+                    <p>We're ready to turn your vision into reality with these key services:</p>
+                    <div class="email" id="email">
+                        <i class="fa-solid fa-envelope"></i>
+                        <span>contact.webzentra@gmail.com</span>
+                    </div>
+                </div>
+                <!-- <div class="contact-form"> -->
+
+                <div class="form-area">
+                    <h1>Please Fill in the form below.</h1>
+                    <form class="contact-form">
+                        <div class="input-box">
+                            <input type="text" required id="inputFullName">
+                            <label id="labelForFullName">Full Name</label>
+                            <i class="fa-solid fa-check" id="correctIcon"></i>
+                        </div>
+                        <div class="input-box">
+                            <input type="Email" required id="inputEmail">
+                            <label id="labelForEmail">Email Address</label>
+                            <i class="fa-solid fa-check" id="correctIcon"></i>
+                        </div>
+                        <div class="input-box">
+                            <input type="text" required id="inputCampany">
+                            <label id="labelForCompany">company</label>
+                            <i class="fa-solid fa-check" id="correctIcon"></i>
+                        </div>
+
+                        <div class="textareaCon">
+                            <textarea id="textarea" class="textarea" required></textarea>
+                            <label for="textarea">Message</label>
+                        </div>
+
+                        <button>Send Message</button>
+                        <div class="spam-msg">
+                            <i class="fa-solid fa-lock"></i>
+                            <p>We hate spam, and we respect your privacy.</p>
+                        </div>
+                    </form>
+                </div>
+                <!-- </div> -->
+            </div>
+        </section>
+
+        <section class="faq-reviews">
+            <div class="faq-reviews-container">
+                <div class="reviews-section">
+                    <h1>What say our clients</h1>
+                    <div class="reviwes">
+                        <div class="reviwe-card">
+                            <div class="reviw-card-header">
+                                <img src="/images/prfile.jpg" alt="prifle image" width="60" class="profileImg">
+                                <div class="text">
+                                    <p>Jaypaldhapa</p>
+                                    <div class="contry">
+                                        <img src="/images/usa.webp" alt="usa" width="25">
+                                        <p>United states</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="hrline"></div>
+                            <div class="reviwe-card-main">
+                                <div class="raiting">
+                                    <div class="rainting-star">
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                    </div>
+                                    <p>5</p>
+                                </div>
+                                <p>Monjurul was very responsive, friendly, and helpful. I appreciate how he worked with
+                                    me throughout the process of rebuilding and redesigning the university website. The
+                                    site now features a modern, responsive layout, a professional academic interface,
+                                    and improved content structure with seamless migration. Thanks.</p>
+                            </div>
+                        </div>
+                        <div class="reviwe-card">
+                            <div class="reviw-card-header">
+                                <img src="/images/prfile.jpg" alt="prifle image" width="60" class="profileImg">
+                                <div class="text">
+                                    <p>Jaypaldhapa</p>
+                                    <div class="contry">
+                                        <img src="/images/usa.webp" alt="usa" width="25">
+                                        <p>United states</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="hrline"></div>
+                            <div class="reviwe-card-main">
+                                <div class="raiting">
+                                    <div class="rainting-star">
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                    </div>
+                                    <p>5</p>
+                                </div>
+                                <p>Monjurul was very responsive, friendly, and helpful. I appreciate how he worked with
+                                    me throughout the process of rebuilding and redesigning the university website. The
+                                    site now features a modern, responsive layout, a professional academic interface,
+                                    and improved content structure with seamless migration. Thanks.</p>
+                            </div>
+                        </div>
+                        <div class="reviwe-card">
+                            <div class="reviw-card-header">
+                                <img src="/images/prfile.jpg" alt="prifle image" width="60" class="profileImg">
+                                <div class="text">
+                                    <p>Jaypaldhapa</p>
+                                    <div class="contry">
+                                        <img src="/images/usa.webp" alt="usa">
+                                        <p>United states</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="hrline"></div>
+                            <div class="reviwe-card-main">
+                                <div class="raiting">
+                                    <div class="rainting-star">
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                    </div>
+                                    <p>5</p>
+                                </div>
+                                <p>Monjurul was very responsive, friendly, and helpful. I appreciate how he worked with
+                                    me throughout the process of rebuilding and redesigning the university website. The
+                                    site now features a modern, responsive layout, a professional academic interface,
+                                    and improved content structure with seamless migration. Thanks.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <section class="faq-section">
+            <header>
+                <h1>F.A.Q</h1>
+            </header>
+
+            <div class="faq-container">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>What is the ISO Certification? And is Intellectual ISO certified?</h3>
+                        <i class="fa-solid fa-angle-down faq-toggle"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>ISO Certification is an international standard that specifies requirements for quality
+                            management systems. It demonstrates an organization's ability to consistently provide
+                            products and services that meet customer and regulatory requirements. Regarding
+                            Intellectual's certification status, we recommend contacting our team directly for the most
+                            up-to-date information about our certifications.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>How to choose a software development services company?</h3>
+                        <i class="fa-solid fa-angle-down faq-toggle"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>When selecting a software development company, consider factors such as their technical
+                            expertise, portfolio of previous work, client testimonials, communication processes, project
+                            management methodology, pricing structure, and cultural fit with your organization. It's
+                            also important to evaluate their ability to scale with your needs and their approach to
+                            security and quality assurance.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>What are the biggest benefits of outsourcing a software development services firm?</h3>
+                        <i class="fa-solid fa-angle-down faq-toggle"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>The primary benefits include cost savings (reduced overhead and recruitment expenses), access
+                            to specialized expertise, faster time-to-market, increased flexibility to scale resources up
+                            or down, focus on core business activities, and risk mitigation through established
+                            development processes and quality assurance measures.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>How to reduce software development services costs?</h3>
+                        <i class="fa-solid fa-angle-down faq-toggle"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Cost reduction strategies include: clearly defining project requirements upfront, adopting
+                            agile methodologies to prioritize essential features, considering offshore or nearshore
+                            development teams, using open-source technologies where appropriate, implementing automated
+                            testing to reduce QA costs, and establishing clear communication channels to minimize
+                            misunderstandings and rework.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Which software development services are in highest demand?</h3>
+                        <i class="fa-solid fa-angle-down faq-toggle"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Currently, high-demand services include cloud-native application development, mobile app
+                            development (both iOS and Android), AI and machine learning solutions, Internet of Things
+                            (IoT) applications, blockchain development, progressive web apps (PWAs), DevOps
+                            implementation, cybersecurity services, and custom enterprise software solutions tailored to
+                            specific business processes.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <script src="script.js"></script>
+        <script src="form.js"></script>
+    </body>
+</html>
