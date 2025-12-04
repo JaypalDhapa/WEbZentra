@@ -1,28 +1,3 @@
-// // contact box 
-
-// const inputFullName = document.getElementById("inputFullName");
-// const inputEmail=document.getElementById("inputEmail");
-// const inputCompany=document.getElementById("inputCompany");
-// const correctIcon = document.getElementById("correctIcon");
-
-// const labelForFullName=document.getElementById("labelForFullName");
-// const labelForEmail=document.getElementById("labelForEmail");
-// const labelForCompany=document.getElementById("lableForCompany");
-
-// inputFullName.addEventListener("blur", ()=>{
-//     if(inputFullName.value !== ""){
-//         correctIcon.style.display="block";
-//         inputFullName.style.borderColor="#3498db";
-//         labelForFullName.style.color="#666"
-//     }else{
-//         inputFullName.style.borderColor="red";
-//         labelForFullName.style.color="red";
-//         correctIcon.style.display="none";
-//     }
-// })
-
-
-
 
 // Sab input boxes ke liye
 const inputs = document.querySelectorAll(".input-box input");
@@ -61,3 +36,83 @@ inputs.forEach(input => {
         }
     });
 });
+
+//model container
+
+
+
+
+// Get DOM elements
+const contactForm = document.getElementById('contactForm');
+const modalOverlay = document.getElementById('modalOverlay');
+const closeModalBtn = document.getElementById('closeModal');
+
+// Function to show the modal
+function showModal() {
+    modalOverlay.classList.add('active');
+    // Prevent scrolling when modal is open
+    document.body.style.overflow = 'hidden';
+}
+
+// Function to hide the modal
+function hideModal() {
+    modalOverlay.classList.remove('active');
+    // Restore scrolling when modal is closed
+    document.body.style.overflow = 'auto';
+}
+
+// Handle form submission
+contactForm.addEventListener('submit', function(event) {
+    event.preventDefault();
+    
+    // Get form data
+    // const name = document.getElementById('name').value;
+    // const email = document.getElementById('email').value;
+    // const subject = document.getElementById('subject').value;
+    // const message = document.getElementById('message').value;
+    
+    // In a real application, you would send this data to a server
+    // console.log('Form submitted:', { name, email, subject, message });
+    
+    // Show the modal
+    setTimeout(()=>{
+        showModal();
+    },500)
+    
+    // Reset the form
+    contactForm.reset();
+});
+
+// Close modal when close button is clicked
+closeModalBtn.addEventListener('click', hideModal);
+
+// Close modal when clicking outside the modal container
+modalOverlay.addEventListener('click', function(event) {
+    if (event.target === modalOverlay) {
+        hideModal();
+    }
+});
+
+// Close modal when pressing Escape key
+document.addEventListener('keydown', function(event) {
+    if (event.key === 'Escape' && modalOverlay.classList.contains('active')) {
+        hideModal();
+    }
+});
+
+
+
+
+
+
+
+//service link
+
+const serviceLink = document.querySelectorAll('.service-link');
+const inputFullName= document.getElementById("inputFullName");
+
+serviceLink.forEach(link =>{
+    link.addEventListener("click", ()=>{
+        inputFullName.focus();
+    })
+})
