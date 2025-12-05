@@ -159,6 +159,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
 const getintouch = document.getElementById("getintouch");
 
-getintouch.addEventListener("click", ()=>{
+// getintouch.addEventListener("click", ()=>{
     
-})
+// })

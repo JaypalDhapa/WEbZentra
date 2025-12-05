@@ -283,19 +283,58 @@
                     <h1>Please Fill in the form below.</h1>
                     <form class="contact-form" id="contactForm">
                         <div class="input-box">
-                            <input type="text" required id="inputFullName">
+                            <input type="text" required id="inputFullName" placeholder=" ">
                             <label id="labelForFullName">Full Name</label>
-                            <i class="fa-solid fa-check" id="correctIcon"></i>
+                            <i class="fa-solid fa-check correct-icon"></i>
                         </div>
                         <div class="input-box">
+                            <input type="email" placeholder=" " required id="inputEmail">
+                            <label id="labelForEmail">Email Address</label>
+                            <i class="fa-solid fa-check correct-icon"></i>
+                        </div>
+                        <!-- <div class="input-box">
+                            
                             <input type="text" required id="inputEmail">
                             <label id="labelForEmail">Email Address</label>
                             <i class="fa-solid fa-check" id="correctIcon"></i>
+                        </div> -->
+                        <div class="form-group">
+                            <div class="country-selector">
+                                <!-- <label class="form-label">Country Code</label> -->
+                                <div class="selected-country" id="selectedCountry">
+                                    <img src="https://flagcdn.com/w20/in.png" alt="India" class="flag" id="selectedFlag">
+                                    <span class="country-code" id="selectedCode">+91</span>
+                                    <span class="country-name" id="selectedName">India</span>
+                                    <span class="dropdown-icon"><i class="fas fa-chevron-down"></i></span>
+                                </div>
+                                <div class="country-dropdown" id="countryDropdown">
+                                    <div class="search-box">
+                                        <input type="text" class="search-input" id="countrySearch" placeholder="Search country...">
+                                    </div>
+                                    <div class="country-list" id="countryList">
+                                        <div class="loading">
+                                            <i class="fas fa-spinner fa-spin"></i> Loading countries...
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+            
+                            <!-- <div class="phone-input">
+                                <label class="form-label">Mobile Number</label>
+                                <input type="tel" class="phone-number-input" id="phoneNumber" placeholder="Enter your mobile number" maxlength="15">
+                            </div> -->
+                            <div class="input-box">
+                                <input type="tel" id ="inputPhone" required id="inputMobile" placeholder=" " maxlength="15">
+                                <!-- <input type="tel" class="phone-number-input" id="phoneNumber" placeholder="Enter your mobile number" maxlength="15"> -->
+                                <label id="labelForCompany">Mobile Number</label>
+                                <i class="fa-solid fa-check correct-icon"></i>
+
+                            </div>
                         </div>
                         <div class="input-box">
-                            <input type="text" required id="inputCampany">
+                            <input type="text" placeholder=" " required id="inputCampany">
                             <label id="labelForCompany">company</label>
-                            <i class="fa-solid fa-check" id="correctIcon"></i>
+                            <i class="fa-solid fa-check correct-icon"></i>
                         </div>
 
                         <div class="textareaCon">
@@ -303,7 +342,19 @@
                             <label for="textarea">Message</label>
                         </div>
 
-                        <button type="submit">Send Message</button>
+                        <!-- <button type="submit">Send Message</button> -->
+                        <button type="submit" class="submit-button" id="submitBtn">
+                            <span class="button-text">Send Message</span>
+                            <div class="dotted-loader">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </div>
+                        </button>
+                          
+                          
+                          
                         <div class="spam-msg">
                             <i class="fa-solid fa-lock"></i>
                             <p>We hate spam, and we respect your privacy.</p>
@@ -568,6 +619,7 @@
 
         </footer>
 
+        <script src="country.js"></script>
         <script src="script.js"></script>
         <script src="form.js"></script>
     </body>
