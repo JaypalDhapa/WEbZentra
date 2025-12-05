@@ -11,6 +11,8 @@
         <title>WebZentra</title>
     </head>
     <body>
+
+
         <header class="navbar">
             <nav class="nav-container">
                 <a href="#" class="logo">
@@ -34,6 +36,8 @@
                     </a>
                     <a class="mobile-btn" href="#contact">
                         <i class="fa-regular fa-envelope"></i>
+                        <!-- <i class="fa-solid fa-briefcase"></i> -->
+                        <!-- <span class="offer-dot"></span> -->
                     </a>
                     <button class="hamburger">
                         <i class="fa-solid fa-bars"></i>
@@ -122,7 +126,7 @@
                         <li><i class="fas fa-check-circle"></i> Responsive design</li>
                         <li><i class="fas fa-check-circle"></i> Performance optimization</li>
                     </ul>
-                    <a  class="service-link">Get Started <i class="fas fa-arrow-right"></i></a>
+                    <a  class="service-link" href="/services.html#customWeb">learn More <i class="fas fa-arrow-right"></i></a>
                 </div>
                 
                 <!-- Service 2 -->
@@ -616,8 +620,52 @@
                     <li><a href="#">Cookie Policy</a></li>
                 </ul>
             </div>
-
         </footer>
+
+         <!-- Popup Overlay -->
+    <div class="popup-overlay" id="popupOverlay">
+        <div class="popup-container">
+            <div class="popup-header">
+                <div class="popup-logo">Web<span>Zentra</span></div>
+                <button class="close-btn" id="closePopup">&times;</button>
+            </div>
+            
+            <div class="popup-content">
+                <div class="offer-badge">WEEK LAUNCH OFFER</div>
+                
+                <h2 class="popup-headline">Launch Special: 50% OFF All Services</h2>
+                
+                <p class="popup-subtext">Celebrate our launch with an exclusive 50% discount on all software and web development services. Limited to the first week only for new clients.</p>
+                
+                <div class="trust-indicators">
+                    <div class="trust-item">
+                        <i class="fas fa-check-circle"></i>
+                        <span>Premium Quality</span>
+                    </div>
+                    <div class="trust-item">
+                        <i class="fas fa-clock"></i>
+                        <span>On-Time Delivery</span>
+                    </div>
+                    <div class="trust-item">
+                        <i class="fas fa-headset"></i>
+                        <span>24/7 Support</span>
+                    </div>
+                </div>
+                
+                <button class="cta-button-offer" id="claimOffer">Claim Offer Now</button>
+                
+                <div class="timer">
+                    <p>Offer expires in: <span id="countdown">7 days</span></p>
+                </div>
+            </div>
+            
+            <div class="popup-footer">
+                <p>No hidden fees. No long-term contracts. Cancel anytime.</p>
+            </div>
+        </div>
+    </div>
+
+    <audio id="notifyTone" src="/notification-sound-effect-372475.mp3" preload="auto"></audio>
 
         <script src="country.js"></script>
         <script src="script.js"></script>

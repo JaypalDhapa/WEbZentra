@@ -158,11 +158,11 @@ document.addEventListener('keydown', function(event) {
 
 //service link
 
-const serviceLink = document.querySelectorAll('.service-link');
-const inputFullName= document.getElementById("inputFullName");
+// const serviceLink = document.querySelectorAll('.service-link');
+// const inputFullName= document.getElementById("inputFullName");
 
-serviceLink.forEach(link =>{
-    link.addEventListener("click", ()=>{
-        inputFullName.focus();
-    })
-})
+// serviceLink.forEach(link =>{
+//     link.addEventListener("click", ()=>{
+//         inputFullName.focus();
+//     })
+// })

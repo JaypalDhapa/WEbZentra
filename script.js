@@ -155,10 +155,108 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 
-// close nav menu when click on gettouch button 
 
-const getintouch = document.getElementById("getintouch");
+//notification 
 
-// getintouch.addEventListener("click", ()=>{
+let permissionGranted = false;
+let popupShown = false;
+
+// Unlock audio after first user interaction
+function enableSound() {
+    if (!permissionGranted) {
+        const audio = document.getElementById("notifyTone");
+        audio.play().then(() => {
+            audio.pause();
+            permissionGranted = true;
+            console.log("Audio permission granted!");
+            startPopupTimer();
+        }).catch(() => {
+            console.log("Audio blocked; waiting for next interaction.");
+        });
+    }
+}
+
+document.addEventListener("click", enableSound);
+document.addEventListener("scroll", enableSound);
+
+// Wait 5 seconds after permission
+function startPopupTimer() {
+    if (popupShown) return;
+    popupShown = true;
+}
+
+// popup box offer 
+
+const popupOverlay = document.getElementById('popupOverlay');
+const closePopupBtn = document.getElementById('closePopup');
+// const showPopupBtn = document.getElementById('showPopup');
+const claimOfferBtn = document.getElementById('claimOffer');
+
+// Function to show the popup
+function showPopup() {
+    popupOverlay.classList.add('active');
+    document.body.style.overflow = 'hidden';
+    document.getElementById("notifyTone").play().catch(()=>{});
+
+    if (navigator.vibrate) {
+        navigator.vibrate([120, 60, 120]); // vibrate → pause → vibrate
+    }
     
-// })
+}
+
+// Function to hide the popup
+function hidePopup() {
+    popupOverlay.classList.remove('active');
+    document.body.style.overflow = 'auto';
+}
+
+// Show popup after 5 seconds
+setTimeout(showPopup, 8000);
+
+// Show popup when trigger button is clicked
+// showPopupBtn.addEventListener('click', showPopup);
+
+// Close popup when close button is clicked
+closePopupBtn.addEventListener('click', hidePopup);
+
+// Close popup when clicking outside the popup container
+popupOverlay.addEventListener('click', function(e) {
+    if (e.target === popupOverlay) {
+        hidePopup();
+    }
+});
+
+// Handle claim offer button click
+claimOfferBtn.addEventListener('click', function() {
+    alert('Thank you for claiming the offer! You will be redirected to our contact form to discuss your project with our team.');
+    hidePopup();
+    
+    // In a real implementation, this would redirect to a contact form or checkout page
+    // window.location.href = '/contact';
+});
+
+// Countdown timer for offer (simplified to show 7 days)
+// In a real implementation, this would be a real countdown
+const countdownElement = document.getElementById('countdown');
+let daysLeft = 7;
+
+// Update countdown every 24 hours (86400000 ms)
+// For demonstration, we'll just show static text
+// In a real implementation, you would calculate time left based on launch date
+
+// Add some interactivity to the page features
+document.querySelectorAll('.feature').forEach(feature => {
+    feature.addEventListener('click', function() {
+        this.style.boxShadow = '0 10px 20px rgba(37, 99, 235, 0.15)';
+        setTimeout(() => {
+            this.style.boxShadow = '0 4px 6px rgba(0, 0, 0, 0.05)';
+        }, 300);
+    });
+});
+
+// Close popup with Escape key
+document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape' && popupOverlay.classList.contains('active')) {
+        hidePopup();
+    }
+});
