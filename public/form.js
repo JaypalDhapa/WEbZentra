@@ -78,14 +78,14 @@ contactForm.addEventListener("submit", function (event) {
     const email = document.getElementById("inputEmail").value;
     const country = document.getElementById("selectedName").textContent;
     const phone = document.getElementById("inputPhone").value;
-    const Company = document.getElementById("inputCampany").value;
+    const company = document.getElementById("inputCampany").value;
     const message = document.getElementById("textarea").value;
 
     const formdata = {
       name,
       email,
       phone,
-      Company,
+      company,
       country,
       message,
     };

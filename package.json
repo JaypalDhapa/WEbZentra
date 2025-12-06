@@ -19,6 +19,7 @@
   },
   "homepage": "https://github.com/JaypalDhapa/WEbZentra#readme",
   "dependencies": {
-    "express": "^5.2.1"
+    "express": "^5.2.1",
+    "nodemailer": "^7.0.11"
   }
 }
