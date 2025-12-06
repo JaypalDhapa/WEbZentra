@@ -209,9 +209,11 @@ function hidePopup() {
     popupOverlay.classList.remove('active');
     document.body.style.overflow = 'auto';
 }
+// .....................................................................................
+// .......................................................................................... 
 
 // Show popup after 5 seconds
-setTimeout(showPopup, 8000);
+// setTimeout(showPopup, 8000);
 
 // Show popup when trigger button is clicked
 // showPopupBtn.addEventListener('click', showPopup);

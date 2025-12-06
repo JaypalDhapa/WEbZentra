@@ -85,6 +85,11 @@ contactForm.addEventListener('submit', function(event) {
     const phone = document.getElementById('inputPhone').value;
     const Company = document.getElementById('inputCampany').value;
     const message = document.getElementById('textarea').value;
+
+    const formdata = {
+        name,email,phone,Company,country,message
+    }
+
     
     // In a real application, you would send this data to a server
     console.log('Form submitted:', { name, email,phone, Company,country, message });
