@@ -69,6 +69,7 @@ contactForm.addEventListener("submit", function (event) {
   } else {
     const submitBtn = document.getElementById("submitBtn");
     const buttonText = submitBtn.querySelector(".button-text");
+   
 
     submitBtn.classList.add("loading");
     submitBtn.disabled = true;
@@ -77,6 +78,8 @@ contactForm.addEventListener("submit", function (event) {
     const name = document.getElementById("inputFullName").value;
     const email = document.getElementById("inputEmail").value;
     const country = document.getElementById("selectedName").textContent;
+    const selectedFlag = document.getElementById("selectedFlag");
+    let flag = selectedFlag.getAttribute('src');
     const phone = document.getElementById("inputPhone").value;
     const company = document.getElementById("inputCampany").value;
     const message = document.getElementById("textarea").value;
@@ -87,6 +90,7 @@ contactForm.addEventListener("submit", function (event) {
       phone,
       company,
       country,
+      flag,
       message,
     };
 
@@ -164,3 +168,6 @@ document.addEventListener("keydown", function (event) {
 //         inputFullName.focus();
 //     })
 // })
+
+
+
